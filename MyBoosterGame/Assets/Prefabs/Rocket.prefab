@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goUpSpeed: 900
   rotationThrust: 110
+  mainSound: {fileID: 8300000, guid: f821b91294c022d4f9bfd31ac67384ae, type: 3}
 --- !u!82 &13533357371715156
 AudioSource:
   m_ObjectHideFlags: 0
@@ -240,6 +241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 2
+  dSound: {fileID: 8300000, guid: 98257df45a521b64798c25acccd713e9, type: 3}
+  finishSound: {fileID: 8300000, guid: 83fce61bfc1d51b459b140be8ad02069, type: 3}
 --- !u!82 &4983502474849290944
 AudioSource:
   m_ObjectHideFlags: 0
@@ -349,3 +352,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoadDelay: 2
+  dSound: {fileID: 0}
+  finishSound: {fileID: 0}

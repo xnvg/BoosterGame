@@ -7,6 +7,14 @@ public class CollisionHandler : MonoBehaviour
 {
 
     [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] AudioClip dSound;
+    [SerializeField] AudioClip finishSound;
+    AudioSource audioSource;
+
+    private void Start() {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter(Collision other) {
         switch(other.gameObject.tag)
         {
@@ -29,6 +37,7 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
     {
         //Todo add SFX upon crash
+        audioSource.PlayOneShot(dSound);
         //todo add particle effect upon crash
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
@@ -37,6 +46,7 @@ public class CollisionHandler : MonoBehaviour
     void StartSuccessSequence()
     {
         //Todo add SFX upon crash
+        audioSource.PlayOneShot(finishSound);
         //todo add particle effect upon crash
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", levelLoadDelay);
